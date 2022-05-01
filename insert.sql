@@ -1,6 +1,8 @@
 insert all
 into po.literatura values ('abramowitz+stegun','book')
 into po.literatura values ('hicks2001','book')
+into po.literatura values ('King','book')
+into po.literatura values ('Martin','book')
 select *  from dual;
 
 insert all
@@ -17,6 +19,19 @@ into po.dane values ('hicks2001','year','2001')
 into po.dane values ('hicks2001','address','Palo Alto')
 into po.dane values ('hicks2001','edition','1st')
 into po.dane values ('hicks2001','isbn','0-69-697269-4')
+into po.dane values ('King','author','Stephen King')
+into po.dane values ('King','title','The Shining')
+into po.dane values ('King','publisher','Doubleday')
+into po.dane values ('King','year','1977')
+into po.dane values ('King','address','United States')
+into po.dane values ('King','edition','1st')
+into po.dane values ('King','isbn','978-0-385-12167-5')
+into po.dane values ('Martin','author',' George R.R. Martin')
+into po.dane values ('Martin','title','A Song of Ice and Fire')
+into po.dane values ('Martin','publisher','Bantam Books')
+into po.dane values ('Martin','year','1996')
+into po.dane values ('Martin','address','United States')
+into po.dane values ('Martin','edition','1st')
 select *  from dual;
 
 insert all
