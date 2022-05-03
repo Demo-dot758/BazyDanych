@@ -17,7 +17,7 @@ where po.literatura.id_lit = po.dane.id_lit;
 Select
     *    
 From
-    hr.dane
+    po.dane
 where
     length( zawartosc ) > 30
 and
@@ -27,7 +27,7 @@ and
 Select
     *    
 From
-    hr.dane
+    po.dane
 where
     zawartosc  < 500
 and
@@ -35,6 +35,6 @@ and
 
 --Select from Literatura,Dane where
 Select DISTINCT typ, typ_pola, zawartosc
-from hr.literatura, hr.dane
-where hr.dane.typ_pola = 'year' and hr.dane.zawartosc> 2017
-and hr.literatura.typ = 'phdthesis';
+from po.literatura, po.dane
+where po.dane.typ_pola = 'year' and po.dane.zawartosc> 2017
+and po.literatura.typ = 'phdthesis';
