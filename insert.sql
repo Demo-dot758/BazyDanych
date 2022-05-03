@@ -253,3 +253,23 @@ and
 Select typ, typ_pola, zawartosc
 from po.literatura, po.dane
 where po.literatura.id_lit = po.dane.id_lit;
+
+--Select from Dane where
+Select
+    *    
+From
+    hr.dane
+where
+    length( zawartosc ) > 30
+and
+    typ_pola = 'title';
+
+--Select from Dane where
+Select
+    *    
+From
+    hr.dane
+where
+    zawartosc  < 500
+and
+    typ_pola = 'pages';
