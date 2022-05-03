@@ -183,6 +183,17 @@ into po.slownik values ('Inbook','Edition','0')
 into po.slownik values ('Inbook','Month','0')
 into po.slownik values ('Inbook','Note','0')
 into po.slownik values ('Inbook','Key','0')
+into po.slownik values ('Incollection','Editor','0')
+into po.slownik values ('Incollection','Volume','0')
+into po.slownik values ('Incollection','Series','0')
+into po.slownik values ('Incollection','Type','0')
+into po.slownik values ('Incollection','Chapter','0')
+into po.slownik values ('Incollection','Pages','0')
+into po.slownik values ('Incollection','Address','0')
+into po.slownik values ('Incollection','Edition','0')
+into po.slownik values ('Incollection','Month','0')
+into po.slownik values ('Incollection','Note','0')
+into po.slownik values ('Incollection','Key','0')
 select *  from dual;
 
 --Dodawanie do tabeli, jeżeli nie ma w niej jeszcze tych wartości
