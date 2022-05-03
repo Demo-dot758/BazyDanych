@@ -9,11 +9,12 @@ BEGIN
     from dual
     where not exists(select * 
                  from po.dane
-                 where (id_lit =p_id_lit and typ_pola =p_typ_pola and zawartosc =p_zawartosc ));
+                 where (LOWER(id_lit) = LOWER(p_id_lit) and LOWER(typ_pola) = LOWER(p_typ_pola) and LOWER(zawartosc) = LOWER(p_zawartosc) ));
 
 COMMIT;
 
 END;
+
 
 
 CREATE OR REPLACE PROCEDURE InsertNewLiteratura(
@@ -26,7 +27,7 @@ BEGIN
     from dual
     where not exists(select * 
                  from po.literatura
-                 where (id_lit =p_id_lit and typ =p_typ));
+                 where (LOWER(id_lit) =LOWER(p_id_lit) and LOWER(typ) =LOWER(p_typ)));
 
 COMMIT;
 
@@ -38,3 +39,18 @@ BEGIN
     InsertNewLiteratura('1234','Book');
 END;
     
+--Jeszcze nie działa, próbowałem zrobić coś do wyświetlania które pola są niezbędne    
+CREATE OR REPLACE PROCEDURE CheckNecessaryTypes(
+    p_typ in po.slownik.typ%TYPE)
+IS
+BEGIN
+    select *
+    from po.slownik
+    where 
+        LOWER(po.slownik.typ) = LOWER(p_typ)
+    and
+        czy_wymagane = 1;
+COMMIT;
+
+END;
+
