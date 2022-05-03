@@ -249,3 +249,7 @@ where
 and
     czy_wymagane = 0;
 
+--Select from Literatura,Dane where
+Select typ, typ_pola, zawartosc
+from po.literatura, po.dane
+where po.literatura.id_lit = po.dane.id_lit;
