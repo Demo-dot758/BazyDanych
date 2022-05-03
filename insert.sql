@@ -175,6 +175,14 @@ into po.slownik values ('Booklet','Month','0')
 into po.slownik values ('Booklet','Year','0')
 into po.slownik values ('Booklet','Note','0')
 into po.slownik values ('Booklet','Key','0')
+into po.slownik values ('Inbook','Volume','0')
+into po.slownik values ('Inbook','Series','0')
+into po.slownik values ('Inbook','Type','0')
+into po.slownik values ('Inbook','Address','0')
+into po.slownik values ('Inbook','Edition','0')
+into po.slownik values ('Inbook','Month','0')
+into po.slownik values ('Inbook','Note','0')
+into po.slownik values ('Inbook','Key','0')
 select *  from dual;
 
 --Dodawanie do tabeli, jeżeli nie ma w niej jeszcze tych wartości
