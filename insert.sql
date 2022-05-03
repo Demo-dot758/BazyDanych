@@ -149,3 +149,11 @@ into po.slownik values ('Unpublished','Title',1)
 into po.slownik values ('Unpublished','Author',1)
 into po.slownik values ('Unpublished','Note',1)
 select *  from dual;
+
+--Dodawanie do tabeli, jeżeli nie ma w niej jeszcze tych wartości
+insert into po.slownik (typ, typ_pola, czy_wymagane) 
+select 'Article', 'Year', 1
+from dual
+where not exists(select * 
+                 from po.slownik
+                 where (typ ='Article' and typ_pola ='Year' and czy_wymagane =1 ));
