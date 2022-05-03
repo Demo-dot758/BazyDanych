@@ -168,6 +168,13 @@ into po.slownik values ('Conference','Organization','0')
 into po.slownik values ('Conference','Publisher','0')
 into po.slownik values ('Conference','Note','0')
 into po.slownik values ('Conference','Key','0')
+into po.slownik values ('Booklet','Author','0')
+into po.slownik values ('Booklet','Howpublished','0')
+into po.slownik values ('Booklet','Address','0')
+into po.slownik values ('Booklet','Month','0')
+into po.slownik values ('Booklet','Year','0')
+into po.slownik values ('Booklet','Note','0')
+into po.slownik values ('Booklet','Key','0')
 select *  from dual;
 
 --Dodawanie do tabeli, jeżeli nie ma w niej jeszcze tych wartości
