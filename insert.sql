@@ -240,3 +240,14 @@ from dual
 where not exists(select * 
                  from po.slownik
                  where (typ ='Article' and typ_pola ='Year' and czy_wymagane =1 ));
+                 
+--Select from slownik
+Select
+    *    
+From
+    po.slownik
+where
+    typ = 'Book'
+and
+    czy_wymagane = 0;
+
