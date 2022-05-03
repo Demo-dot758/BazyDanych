@@ -273,3 +273,9 @@ where
     zawartosc  < 500
 and
     typ_pola = 'pages';
+
+--Select from Literatura,Dane where
+Select DISTINCT typ, typ_pola, zawartosc
+from hr.literatura, hr.dane
+where hr.dane.typ_pola = 'year' and hr.dane.zawartosc> 2017
+and hr.literatura.typ = 'phdthesis';
