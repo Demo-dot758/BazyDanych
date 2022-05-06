@@ -11,4 +11,7 @@ into po.literatura values ('texas','manual')
 into po.literatura values ('reiman','phdthesis')
 into po.literatura values ('ak-smith','phdthesis')
 into po.literatura values ('jmartindell','phdthesis')
+into hr.literatura values ('sloane','Unpublished')
+into hr.literatura values ('krueger+colombetti','Unpublished')
+into hr.literatura values ('mitchell','Unpublished')
 select *  from dual;
