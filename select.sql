@@ -38,3 +38,12 @@ Select DISTINCT typ, typ_pola, zawartosc
 from po.literatura, po.dane
 where po.dane.typ_pola = 'year' and po.dane.zawartosc> 2017
 and po.literatura.typ = 'phdthesis';
+
+
+//Usuwanie powtarzajacych sie rzędów
+DELETE FROM po.literatura
+WHERE rowid not in
+(SELECT MIN(rowid)
+FROM po.literatura
+GROUP BY id_lit, typ);
+
