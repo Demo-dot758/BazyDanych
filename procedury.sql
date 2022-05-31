@@ -33,6 +33,23 @@ COMMIT;
 
 END;
 
+CREATE OR REPLACE PROCEDURE InsertNewSlownik(
+    p_typ in po.slownik.typ%TYPE,
+    p_typ_pola in po.slownik.typ_pola%TYPE,
+    p_czy_wymagane in po.slownik.czy_wymagane%TYPE)
+AS
+BEGIN
+    insert into po.slownik (typ, typ_pola, czy_wymagane) 
+    select p_typ, p_typ_pola, p_czy_wymagane
+    from dual
+    where not exists(select * 
+                 from hr.slownik
+                 where (LOWER(typ) =LOWER(p_typ) and LOWER(typ_pola) =LOWER(p_typ_pola) and LOWER(czy_wymagane) = LOWER(p_czy_wymagane)));
+
+COMMIT;
+
+END;
+
 
 --Wywołanie procedur przykład
 BEGIN
